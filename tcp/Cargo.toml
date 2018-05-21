@@ -1,0 +1,31 @@
+[package]
+name = "jsonrpc-client-tcp"
+version = "0.3.0"
+authors = ["Mullvad VPN <admin@mullvad.net>", "Linus Färnstrand <linus@mullvad.net>", "Joseph Ross <joe@junelife.com>"]
+description = "A transport implementation for jsonrpc-client-core based on TCP and futures"
+readme = "README.md"
+keywords = ["jsonrpc", "rpc", "client", "tcp"]
+categories = ["network-programming"]
+repository = "https://github.com/mullvad/jsonrpc-client-rs"
+license = "MIT/Apache-2.0"
+
+[dependencies]
+error-chain = "0.11"
+futures = "0.1.15"
+log = "0.4"
+tokio = "0.1"
+tokio-core = "0.1"
+tokio-io = "0.1"
+
+jsonrpc-client-core = { version = "0.3", path = "../core" }
+
+[dev-dependencies]
+jsonrpc-core = "8.0"
+jsonrpc-macros = "8.0"
+jsonrpc-tcp-server = "8.0"
+tokio-service = "0.1"
+
+
+[badges]
+travis-ci = { repository = "mullvad/jsonrpc-client-rs" }
+appveyor = { repository = "mullvad/jsonrpc-client-rs" }
